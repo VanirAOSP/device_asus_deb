@@ -128,8 +128,11 @@ on boot
 
 # Assign TCP buffer thresholds to be ceiling value of technology maximums
 # Increased technology maximums should be reflected here.
-    write /proc/sys/net/core/rmem_max  1220608
-    write /proc/sys/net/core/wmem_max  1220608
+    write /proc/sys/net/core/rmem_max  2097152
+    write /proc/sys/net/core/wmem_max  2097152
+
+# Tune buffersize for higher Miracast throughput
+    setprop net.tcp.buffersize.wifi 524288,1048576,2560000,524288,1048576,2560000
 
 #Modify windows size to meet ATT requirement
     setprop net.tcp.buffersize.hspa    4094,87380,704512,4096,16384,262144
