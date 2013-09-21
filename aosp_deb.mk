@@ -23,9 +23,6 @@ $(call inherit-product, device/asus/deb/device.mk)
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-# gsm
-$(call inherit-product, vendor/carbon/config/common_gsm.mk)
-
 PRODUCT_NAME := aosp_deb
 PRODUCT_DEVICE := deb
 PRODUCT_BRAND := Android
