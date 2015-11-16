@@ -17,7 +17,6 @@
 # rild
 PRODUCT_PACKAGES := \
     rild \
-    CarrierConfig \
     BasicSmsReceiver
 
 PRODUCT_COPY_FILES := \
@@ -33,10 +32,6 @@ PRODUCT_PACKAGES += \
 #NFC
 PRODUCT_PACKAGES += \
     nfc_nci.bcm2079x.default
-
-# http://b/15193147
-# TODO(danalbert): Remove this once stlport is dead and gone.
-PRODUCT_PACKAGES +=  libstlport
 
 # Do not power down SIM card when modem is sent to Low Power Mode.
 PRODUCT_PROPERTY_OVERRIDES += \
